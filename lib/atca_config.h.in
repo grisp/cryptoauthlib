@@ -3,14 +3,14 @@
 #define ATCA_CONFIG_H
 
 /* Included HALS */
-#cmakedefine ATCA_HAL_KIT_UART
-#cmakedefine ATCA_HAL_KIT_HID
+// #cmakedefine ATCA_HAL_KIT_UART
+// #cmakedefine ATCA_HAL_KIT_HID
 #cmakedefine ATCA_HAL_I2C
-#cmakedefine ATCA_HAL_SPI
-#cmakedefine ATCA_HAL_KIT_BRIDGE
-#cmakedefine ATCA_HAL_CUSTOM
-#cmakedefine ATCA_HAL_SWI
-#cmakedefine ATCA_HAL_1WIRE
+// #cmakedefine ATCA_HAL_SPI
+// #cmakedefine ATCA_HAL_KIT_BRIDGE
+// #cmakedefine ATCA_HAL_CUSTOM
+// #cmakedefine ATCA_HAL_SWI
+// #cmakedefine ATCA_HAL_1WIRE
 
 
 /** Define to enable compatibility with legacy HALs
@@ -19,13 +19,13 @@
 
 
 /* Included device support */
-#cmakedefine ATCA_ATSHA204A_SUPPORT
-#cmakedefine ATCA_ATSHA206A_SUPPORT
-#cmakedefine ATCA_ATECC108A_SUPPORT
-#cmakedefine ATCA_ATECC508A_SUPPORT
+// #cmakedefine ATCA_ATSHA204A_SUPPORT
+// #cmakedefine ATCA_ATSHA206A_SUPPORT
+// #cmakedefine ATCA_ATECC108A_SUPPORT
+// #cmakedefine ATCA_ATECC508A_SUPPORT
 #cmakedefine ATCA_ATECC608_SUPPORT
-#cmakedefine ATCA_TA100_SUPPORT
-#cmakedefine ATCA_ECC204_SUPPORT
+// #cmakedefine ATCA_TA100_SUPPORT
+// #cmakedefine ATCA_ECC204_SUPPORT
 
 /** Device Override - Library Assumes ATECC608B support in checks */
 #cmakedefine ATCA_ATECC608A_SUPPORT
@@ -63,9 +63,9 @@
 
 /** Define Software Crypto Library to Use - if none are defined use the
     cryptoauthlib version where applicable */
-#cmakedefine ATCA_MBEDTLS
+// #cmakedefine ATCA_MBEDTLS
 #cmakedefine ATCA_OPENSSL
-#cmakedefine ATCA_WOLFSSL
+// #cmakedefine ATCA_WOLFSSL
 
 /** Additional Runtime Configuration */
 #cmakedefine ATCA_LIBRARY_CONF  "@ATCA_LIBRARY_CONF@"
@@ -74,14 +74,14 @@
 #cmakedefine ATCA_USE_ATCAB_FUNCTIONS
 
 /** Define to enable older API forms that have been replaced */
-#cmakedefine ATCA_ENABLE_DEPRECATED
+// #cmakedefine ATCA_ENABLE_DEPRECATED
 
 /** TA100 Specific - Enable auth sessions that require AES (CMAC/GCM) from
    an external library */
-#cmakedefine ATCA_TA100_AES_AUTH_SUPPORT
+// #cmakedefine ATCA_TA100_AES_AUTH_SUPPORT
 
 /** TA100 Specific - Enable support for the FCE APIs for the TA100 */
-#cmakedefine ATCA_TA100_FCE_SUPPORT
+// #cmakedefine ATCA_TA100_FCE_SUPPORT
 
 /******************** Platform Configuration Section ***********************/
 
