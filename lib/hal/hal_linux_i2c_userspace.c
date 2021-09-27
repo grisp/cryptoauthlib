@@ -27,7 +27,6 @@
 
 #include <cryptoauthlib.h>
 
-#include <linux/i2c-dev.h>
 #include <unistd.h>
 #include <sys/ioctl.h>
 #include <sys/types.h>
@@ -142,7 +141,7 @@ ATCA_STATUS hal_i2c_send(ATCAIface iface, uint8_t address, uint8_t *txdata, int 
     }
 
     // Set Device Address
-    if (ioctl(f_i2c, I2C_SLAVE, address >> 1) < 0)
+    if (ioctl(f_i2c, 0x703, address >> 1) < 0)
     {
         close(f_i2c);
         return ATCA_COMM_FAIL;
@@ -184,7 +183,7 @@ ATCA_STATUS hal_i2c_receive(ATCAIface iface, uint8_t address, uint8_t *rxdata, u
     }
 
     // Set Device Address
-    if (ioctl(f_i2c, I2C_SLAVE, address >> 1) < 0)
+    if (ioctl(f_i2c, 0x703, address >> 1) < 0)
     {
         close(f_i2c);
         return ATCA_COMM_FAIL;

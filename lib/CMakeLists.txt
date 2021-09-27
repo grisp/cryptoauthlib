@@ -355,7 +355,6 @@ target_link_libraries(cryptoauth ${IO_KIT_LIB} ${CORE_LIB})
 endif()
 
 if(LINUX)
-add_definitions(-DATCA_USE_SHARED_MUTEX)
 if(USE_LIBUSB)
 target_link_libraries(cryptoauth usb-1.0)
 elseif(USE_UDEV)
